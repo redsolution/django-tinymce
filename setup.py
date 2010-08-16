@@ -7,7 +7,7 @@ app_name = metadata.name
 version = metadata.version
 
 setup(
-    name = "django-%s" % app_name,
+    name = "redsolutioncms.django-tinymce",
     version = version,
 
     packages = [app_name, '%s.templatetags' % app_name],
@@ -15,7 +15,7 @@ setup(
 
     author = "Joost Cassee",
     author_email = "joost@cassee.net",
-    description = "A Django application that contains a widget to render a" \
+    description = "Fork of django application that contains a widget to render a" \
             " form field as a TinyMCE editor.",
     long_description = \
 """
