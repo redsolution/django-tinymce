@@ -47,4 +47,7 @@ Features:
     url = "http://code.google.com/p/django-%s/" % app_name,
     download_url = "http://code.google.com/p/django-%s/downloads/list" \
             % app_name,
+    entry_points={
+        'grandma_setup': ['tinymce = tinymce.grandma_setup', ],
+    }
 )

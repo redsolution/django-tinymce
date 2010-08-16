@@ -22,7 +22,7 @@ DEFAULT_CONFIG = getattr(settings, 'TINYMCE_DEFAULT_CONFIG',
                 'height' : 480,
 
                 'gecko_spellcheck' : True,
-            	'content_css': settings.STATIC_URL+'css/editor.css',
+            	'content_css': settings.MEDIA_URL+'css/editor.css',
             }
         )
 
