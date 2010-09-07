@@ -1,5 +1,5 @@
-from grandma.make import BaseMake
-from grandma.models import GrandmaSettings
+from redsolutioncms.make import BaseMake
+from redsolutioncms.models import CMSSettings
 from os.path import dirname, join
 import shutil
 
@@ -7,14 +7,14 @@ class Make(BaseMake):
 
     def make(self):
         super(Make, self).make()
-        cms_settings = GrandmaSettings.objects.get_settings()
+        cms_settings = CMSSettings.objects.get_settings()
         
-        cms_settings.render_to('settings.py', 'tinymce/grandma/settings.py')
-        cms_settings.render_to('urls.py', 'tinymce/grandma/urls.py')
+        cms_settings.render_to('settings.py', 'tinymce/redsolutioncms/settings.pyt')
+        cms_settings.render_to('urls.py', 'tinymce/redsolutioncms/urls.pyt')
 
     def postmake(self):
         super(Make, self).postmake()
-        cms_settings = GrandmaSettings.objects.get_settings()
+        cms_settings = CMSSettings.objects.get_settings()
         tinymce_media_dir = join(dirname(dirname(__file__)), 'media')
         project_media_dir = join(cms_settings.project_dir, 'media')
 
@@ -25,10 +25,12 @@ class Make(BaseMake):
         except OSError:
             pass
 
-        if 'grandma.django-server-config' not in cms_settings.installed_packages:
+        if 'redsolutioncms.django-server-config' not in cms_settings.installed_packages:
 
 #           copy files to media directory
             shutil.copytree(
                 join(tinymce_media_dir, 'tinymce'),
                 join(project_media_dir, 'tinymce'),
             )
+
+make = Make()
