@@ -2,3 +2,5 @@ include *.txt *.py
 include docs/*.rst
 recursive-include tinymce/templates *.js *.html
 recursive-include tinymce/media *.js *.html
+recursive-include tinymce/redsolution_setup *
+exclude *.orig *.pyc

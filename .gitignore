@@ -1,3 +1,10 @@
-*.egg-info
+.svn
+*.orig
 *.pyc
+.project
+.pydevproject
+.settings
+build/*
+dist/*
+*.egg-info/*
 .DS_Store
