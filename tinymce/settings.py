@@ -42,7 +42,7 @@ JS_URL = getattr(settings, 'TINYMCE_JS_URL',
 JS_ROOT = getattr(settings, 'TINYMCE_JS_ROOT',
 ###   original tinymce config
 #        os.path.join(settings.MEDIA_ROOT, 'js/tiny_mce'))
-
-        os.path.join(settings.MEDIA_ROOT, 'tinymce/jscripts/tiny_mce'))
+        os.path.join(os.path.dirname(__file__), 'media/tinymce/jscripts/tiny_mce'))
 
 JS_BASE_URL = JS_URL[:JS_URL.rfind('/')]
+
