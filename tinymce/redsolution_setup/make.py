@@ -15,7 +15,7 @@ class Make(BaseMake):
     def postmake(self):
         super(Make, self).postmake()
         cms_settings = CMSSettings.objects.get_settings()
-        if cms_settings.package_was_installed('redsolutioncms.django-server-config'):
+        if 'redsolutioncms.django-server-config' not in cms_settings.installed_packages:
             tinymce_media_dir = join(dirname(dirname(__file__)), 'media')
             project_media_dir = join(cms_settings.project_dir, 'media')
 #           WARNING! Silently delete media dirs
@@ -24,7 +24,6 @@ class Make(BaseMake):
 #                no such directory
             except OSError:
                 pass
-
 #           copy files to media directory
             shutil.copytree(
                 join(tinymce_media_dir, 'tinymce'),

@@ -1,4 +1,4 @@
-# Django-page-cms urls
+# ---- django-tiny-mce ----
 
 urlpatterns += patterns('',
     (r'^tinymce/', include('tinymce.urls')),
