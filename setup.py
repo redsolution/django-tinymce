@@ -1,26 +1,28 @@
-#!/usr/bin/env python
-
+# -*- coding: utf-8 -*-
+import os
 from setuptools import setup, find_packages
-import metadata
 
-app_name = metadata.name
-version = metadata.version
+# Utility function to read the README file.  
+# Used for the long_description.  It's nice, because now 1) we have a top level
+# README file and 2) it's easier to type in the README file than to put a raw
+# string in below ...
+def read(fname):
+    try:
+        return open(os.path.join(os.path.dirname(__file__), fname)).read()
+    except IOError:
+        return ''
 
 setup(
     name="redsolutioncms.django-tinymce",
-    version=version,
-    description="Fork of django application that contains a widget to render a" \
-            " form field as a TinyMCE editor.",
+    version=__import__('tinymce').__version__,
+    description=read('DESCRIPTION'),
     license="MIT License",
     keywords="django widget tinymce",
 
     author="Joost Cassee",
     author_email="joost@cassee.net",
 
-    maintainer='Ivan Gromov',
-    maintainer_email='src@redsolution.ru',
-
-    url="http://code.google.com/p/django-%s/" % app_name,
+    url="http://code.google.com/p/django-tinymce/",
 
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -34,25 +36,11 @@ setup(
         'Programming Language :: Python',
         'Topic :: Internet :: WWW/HTTP :: Site Management',
     ],
-    packages=find_packages(),
+    packages=find_packages(exclude=['testtinymce']),
     include_package_data=True,
     zip_safe=False,
-    long_description=\
-"""
-Use the TinyMCE editor for your form textareas.
-
-Features:
-
-* Use as a form widget or with a view.
-* Enhanced support for content languages.
-* Integration with the TinyMCE spellchecker.
-* Enables predefined link and image lists for dialogs.
-* Can compress the TinyMCE javascript files.
-* Integration with django-filebrowser.
-""",
-    platforms=['any'],
-    download_url="http://code.google.com/p/django-%s/downloads/list" \
-            % app_name,
+    long_description=read('README'),
+    download_url="http://code.google.com/p/django-tinymce/downloads/list",
     entry_points={
         'redsolutioncms': ['tinymce = tinymce.redsolution_setup', ],
     }
