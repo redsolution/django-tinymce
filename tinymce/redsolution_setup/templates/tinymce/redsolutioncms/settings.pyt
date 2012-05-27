@@ -19,7 +19,7 @@ TINYMCE_DEFAULT_CONFIG.update({
     'theme_advanced_buttons3': 'visualaid,tablecontrols,|,blockquote,del,ins,|,preview,code',
     'theme_advanced_toolbar_location': 'top',
     'theme_advanced_toolbar_align': 'left',
-    'content_css': '/media/css/tinymce.css',
+    'content_css': '/static/css/tinymce.css',
     'extended_valid_elements': 'noindex',
     'custom_elements': 'noindex',
     'external_image_list_url': 'images/',
