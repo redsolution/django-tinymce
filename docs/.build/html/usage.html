@@ -392,7 +392,7 @@ widget:</p>
 <tt class="docutils literal"><span class="pre">tinymce-js</span></tt> named view to convert some or all textfields on a page to
 TinyMCE editors. On the template of the page, add the following lines to the
 <tt class="docutils literal"><span class="pre">HEAD</span></tt> element:</p>
-<pre>&lt;script type="text/javascript" src="{{ MEDIA_URL }}js/tiny_mce/tiny_mce.js"&gt;&lt;/script&gt;
+<pre>&lt;script type="text/javascript" src="{{ STATIC_URL }}js/tiny_mce/tiny_mce.js"&gt;&lt;/script&gt;
 &lt;script type="text/javascript" src="{% url tinymce-js "NAME" %}"&gt;&lt;/script&gt;</pre>
 <p>The <tt class="docutils literal"><span class="pre">NAME</span></tt> argument allows you to create multiple TinyMCE configurations. Now
 create a template containing the Javascript initialization code. It should be
@@ -484,7 +484,7 @@ ModelAdmin class for flatpages first:</p>
 You just need to add the TinyMCE javascript code.</p>
 <ol class="arabic simple">
 <li>Checkout the test project: <tt class="docutils literal"><span class="pre">svn</span> <span class="pre">checkout</span> <span class="pre">http://django-tinymce.googlecode.com/svn/trunk/testtinymce</span></tt></li>
-<li>Copy the <tt class="docutils literal"><span class="pre">tiny_mce</span></tt> directory from the TinyMCE distribution into <tt class="docutils literal"><span class="pre">media/js</span></tt></li>
+<li>Copy the <tt class="docutils literal"><span class="pre">tiny_mce</span></tt> directory from the TinyMCE distribution into <tt class="docutils literal"><span class="pre">static/js</span></tt></li>
 <li>Run <tt class="docutils literal"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">syncdb</span></tt></li>
 <li>Run <tt class="docutils literal"><span class="pre">python</span> <span class="pre">manage.py</span> <span class="pre">runserver</span></tt></li>
 <li>Connect to <a class="reference" href="http://localhost:8000/admin/">http://localhost:8000/admin/</a></li>

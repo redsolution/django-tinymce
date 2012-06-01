@@ -22,7 +22,7 @@ DEFAULT_CONFIG = getattr(settings, 'TINYMCE_DEFAULT_CONFIG',
                 'height' : 480,
 
                 'gecko_spellcheck' : True,
-            	'content_css': settings.MEDIA_URL+'css/editor.css',
+                'content_css': settings.STATIC_URL+'css/editor.css',
             }
         )
 
@@ -35,14 +35,14 @@ USE_FILEBROWSER = getattr(settings, 'TINYMCE_FILEBROWSER',
 
 JS_URL = getattr(settings, 'TINYMCE_JS_URL',
 ###   original tinymce config
-#        '%sjs/tiny_mce/tiny_mce.js' % settings.MEDIA_URL)
+#        '%sjs/tiny_mce/tiny_mce.js' % settings.STATIC_URL)
 
-        '%stinymce/jscripts/tiny_mce/tiny_mce.js' % settings.MEDIA_URL)
+        '%stinymce/jscripts/tiny_mce/tiny_mce.js' % settings.STATIC_URL)
 
 JS_ROOT = getattr(settings, 'TINYMCE_JS_ROOT',
 ###   original tinymce config
-#        os.path.join(settings.MEDIA_ROOT, 'js/tiny_mce'))
-        os.path.join(os.path.dirname(__file__), 'media/tinymce/jscripts/tiny_mce'))
+#        os.path.join(settings.STATIC_ROOT, 'js/tiny_mce'))
+        os.path.join(os.path.dirname(__file__), 'static/tinymce/jscripts/tiny_mce'))
 
 JS_BASE_URL = JS_URL[:JS_URL.rfind('/')]
 
