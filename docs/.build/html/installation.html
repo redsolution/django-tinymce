@@ -330,7 +330,7 @@ Python code:</p>
 <p>#. Place the <tt class="docutils literal"><span class="pre">tinymce</span></tt> module in your Python path. You can put it into your
 Django project directory or run <tt class="docutils literal"><span class="pre">python</span> <span class="pre">setup.py</span> <span class="pre">install</span></tt> from a shell.</p>
 <p>#. Copy the <tt class="docutils literal"><span class="pre">jscripts/tiny_mce</span></tt> directory from the TinyMCE distribution into
-a directory named <tt class="docutils literal"><span class="pre">js</span></tt> in your media root. You can override the location in
+a directory named <tt class="docutils literal"><span class="pre">js</span></tt> in your static root. You can override the location in
 your settings (see below).</p>
 <p>#. If you want to use any of the views add tinymce your installed applications
 list and URLconf:</p>
@@ -353,9 +353,9 @@ list and URLconf:</p>
 <p>The application can be configured by editing the project&#8217;s <tt class="docutils literal"><span class="pre">settings.py</span></tt>
 file.</p>
 <dl class="docutils">
-<dt><tt class="docutils literal"><span class="pre">TINYMCE_JS_URL</span></tt> (default: <tt class="docutils literal"><span class="pre">settings.MEDIA_URL</span> <span class="pre">+</span> <span class="pre">'js/tiny_mce/tiny_mce.js'</span></tt>)</dt>
+<dt><tt class="docutils literal"><span class="pre">TINYMCE_JS_URL</span></tt> (default: <tt class="docutils literal"><span class="pre">settings.STATIC_URL</span> <span class="pre">+</span> <span class="pre">'js/tiny_mce/tiny_mce.js'</span></tt>)</dt>
 <dd>The URL of the TinyMCE javascript file.</dd>
-<dt><tt class="docutils literal"><span class="pre">TINYMCE_JS_ROOT</span></tt> (default: <tt class="docutils literal"><span class="pre">settings.MEDIA_ROOT</span> <span class="pre">+</span> <span class="pre">'js/tiny_mce'</span></tt>)</dt>
+<dt><tt class="docutils literal"><span class="pre">TINYMCE_JS_ROOT</span></tt> (default: <tt class="docutils literal"><span class="pre">settings.STATIC_ROOT</span> <span class="pre">+</span> <span class="pre">'js/tiny_mce'</span></tt>)</dt>
 <dd>The filesystem location of the TinyMCE files.</dd>
 <dt><tt class="docutils literal"><span class="pre">TINYMCE_DEFAULT_CONFIG</span></tt> (default: <tt class="docutils literal"><span class="pre">{'theme':</span> <span class="pre">&quot;simple&quot;,</span> <span class="pre">'relative_urls':</span> <span class="pre">False}</span></tt>)</dt>
 <dd>The default TinyMCE configuration to use. See <a class="reference" href="http://wiki.moxiecode.com/index.php/TinyMCE:Configuration">the TinyMCE manual</a> for all
