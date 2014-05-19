@@ -23,6 +23,12 @@ file in the distribution. Note that the TinyMCE editor is distributed under
 .. _`its own license`: http://tinymce.moxiecode.com/license.php
 
 
+Requirements
+------------
+
+Django 1.3+ is required.
+For Django < 1.3 please check out django-tinymce 1.5.1.
+
 Installation
 ------------
 
@@ -95,7 +101,7 @@ Example::
   TINYMCE_SPELLCHECKER = True
   TINYMCE_COMPRESSOR = True
 
-REdsolution CMS classifiers:
+Redsolution CMS classifiers:
 ----------------------------
 
 `Content plugins`_
