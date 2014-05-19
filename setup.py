@@ -22,7 +22,10 @@ setup(
     author="Joost Cassee",
     author_email="joost@cassee.net",
 
-    url="http://code.google.com/p/django-tinymce/",
+    maintainer='Alexander Ivanov',
+    maintainer_email='alexander.ivanov@redsolution.ru',
+
+    url="https://github.com/redsolution/django-tinymce",
 
     classifiers=[
         'Development Status :: 3 - Alpha',
@@ -39,8 +42,7 @@ setup(
     packages=find_packages(exclude=['testtinymce']),
     include_package_data=True,
     zip_safe=False,
-    long_description=read('README'),
-    download_url="http://code.google.com/p/django-tinymce/downloads/list",
+    long_description=read('README.rst'),
     entry_points={
         'redsolutioncms': ['tinymce = tinymce.redsolution_setup', ],
     }
